@@ -9,6 +9,7 @@ add_executable(threads.exe
     src/main.cpp
     src/min_max.cpp
     src/average.cpp
+    src/thread_utils.cpp
 )
 
 target_include_directories(threads.exe PRIVATE ${CMAKE_SOURCE_DIR}/include)
@@ -40,6 +41,7 @@ add_executable(test_runner
     tests/test_runner.cpp
     tests/test_min_max.cpp
     tests/test_average.cpp
+    src/thread_utils.cpp
 )
 
 target_link_libraries(test_runner
