@@ -22,8 +22,8 @@ void* min_max_thread(void* param) {
 #endif
     }
     
-    data->min = INT_MAX;
-    data->max = INT_MIN;
+    data->min = data->array[0];
+    data->max = data->array[0];
     
     cout << "MinMax thread: Searching for min and max..." << endl;
     

@@ -30,15 +30,20 @@ struct ThreadData {
 #ifdef _WIN32
     typedef HANDLE thread_t;
     #define THREAD_RETURN DWORD WINAPI
-    #define THREAD_CALLBACK
+    typedef LPVOID thread_param_t;
 #else
     typedef pthread_t thread_t;
     #define THREAD_RETURN void*
-    #define THREAD_CALLBACK
+    typedef void* thread_param_t;
 #endif
 
-THREAD_RETURN min_max_thread(LPVOID param);
-THREAD_RETURN average_thread(LPVOID param);
+#ifdef _WIN32
+DWORD WINAPI min_max_thread(LPVOID param);
+DWORD WINAPI average_thread(LPVOID param);
+#else
+void* min_max_thread(void* param);
+void* average_thread(void* param);
+#endif
 
 void sleep_ms(int milliseconds);
 

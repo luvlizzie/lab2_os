@@ -36,11 +36,12 @@ set(INSTALL_GTEST OFF CACHE BOOL "" FORCE)
 
 FetchContent_MakeAvailable(googletest)
 
-# Тестовый раннер
 add_executable(test_runner
     tests/test_runner.cpp
     tests/test_min_max.cpp
     tests/test_average.cpp
+    src/min_max.cpp
+    src/average.cpp      
     src/thread_utils.cpp
 )
 
