@@ -1,0 +1,32 @@
+# Build directories
+build/
+_artifacts/
+_3rdParty/
+*.exe
+*.dSYM/
+
+# IDE files
+.vscode/
+.xcode/
+.DS_Store
+*.user
+*.suo
+
+# Test files
+test_data/
+allure-results/
+allure-report/
+
+# Compiled files
+*.o
+*.a
+*.dylib
+*.so
+*.dll
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+_deps/

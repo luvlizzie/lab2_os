@@ -10,7 +10,6 @@ static constexpr int MAX_ELEMENT_VALUE = 1000;
 static constexpr int SLEEP_MS_MIN_MAX = 7;
 static constexpr int SLEEP_MS_AVERAGE = 12;
 
-// Структура для передачи данных в потоки
 struct ThreadData {
     int* array;
     size_t size;
